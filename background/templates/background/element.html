@@ -1,0 +1,10 @@
+{% extends "mainApp/homePage.html" %}
+
+{% block content %}
+    <h2 class="text-info">{{background.specialization}}</h2>
+    <h6>Учебное заведение в г. {{background.city}}: {{background.institution_name}}</h6>
+    <h6>Факультет: {{background.faculty}}</h6>
+    <h6>Уровень: {{background.level}}</h6>
+    <h6>Год поступления: {{background.year_start}}</h6>
+    <h6>Год окончания: {{background.year_end}}</h6>
+{% endblock %}

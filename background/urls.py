@@ -6,5 +6,7 @@ urlpatterns = [
     url(r'^$',
         ListView.as_view(queryset = Background.objects.all(),
         template_name="Background/elements.html")),
-    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Background, template_name ="background/element.html"))
+
+    url(r'^(?P<pk>\d+)$',
+        DetailView.as_view(model = Background, template_name ="background/element.html"))
 ]

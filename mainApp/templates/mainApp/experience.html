@@ -1,0 +1,16 @@
+{% extends "mainApp/basic.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<ul>
+    {% for element in object_list%}
+        <li>
+        <div>
+            <p><b>Должность: {{element.position}}</b></p>
+            <h6>Компания: {{element.company_name}}</h6>
+            <h6>Обязанности: {{element.responsibilities}}</h6>
+        </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

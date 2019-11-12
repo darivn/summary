@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+import datetime
 
 class Background (models.Model):
     institution_name = models.CharField(max_length=300)
@@ -13,3 +14,14 @@ class Background (models.Model):
 
     def __str__(self):
         return self.institution_name
+
+class Experience (models.Model):
+    position = models.CharField(max_length=150)
+    company_name = models.CharField(max_length=150)
+    area = models.CharField(max_length=300)
+    responsibilities = models.CharField(max_length=300)
+    time_start = models.DateField(default=datetime.date.today())
+    time_end = models.DateField(default=datetime.date.today(), null=True, blank=True)
+
+    def __str__(self):
+        return self.position

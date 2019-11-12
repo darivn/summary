@@ -33,16 +33,21 @@
   </nav>
 </header>
 
+  <main role="main">
   <div class="jumbotron">
     <div class="container">
       {% block content %}
       {% endblock %}
     </div>
   </div>
+  </main>
+
+  <footer class="footer mt-auto py-3">
   <div class="container">
     <hr>
-    &copy; Все права защищены {{year}}
+    <span class="text-muted">&copy; Все права защищены {{year}}</span>
   </div>
+</footer>
 
   </body>
 </html>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.http import Http404
 import datetime
-from mainApp.models import Background
+from mainApp.models import Background, Experience
 
 # Create your views here.
 def index(request):
@@ -16,10 +17,21 @@ def contacts(request):
                       'year': datetime.date.today().year
                   })
 
+def experience(request):
+    return render(request, 'mainApp/experience.html',
+                  {
+                      'object_list': Experience.objects.all(),
+                      'year': datetime.date.today().year
+                  })
+
 def element(request, pk):
+    try:
+        id=int(pk)
+    except ValueError:
+        raise Http404()
     return render(request, 'mainApp/element.html',
                   {
-                      'background': Background.objects.get(pk=pk),
+                      'background': Background.objects.get(pk=id),
                       'year': datetime.date.today().year
                   })
 

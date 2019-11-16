@@ -6,6 +6,7 @@
 
     {% load staticfiles %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'mainApp/css/basic.css' %}">
     <link rel="shortcut icon" href="{% static 'mainApp/image/favicon.svg' %}">
 
   </head>
@@ -42,12 +43,12 @@
   </div>
   </main>
 
-  <footer class="footer mt-auto py-3">
-  <div class="container">
-    <hr>
-    <span class="text-muted">&copy; Все права защищены {{year}}</span>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <hr>
+      <span class="text-muted">&copy; Все права защищены {{year}}</span>
+    </div>
+  </footer>
 
   </body>
 </html>

@@ -11,9 +11,11 @@ class Background (models.Model):
     year_start = models.IntegerField()
     year_end = models.IntegerField()
 
-
     def __str__(self):
         return self.institution_name
+
+    class Meta:
+        ordering = ['year_start']
 
 class Experience (models.Model):
     position = models.CharField(max_length=150)
@@ -25,3 +27,6 @@ class Experience (models.Model):
 
     def __str__(self):
         return self.position
+
+    class Meta:
+        ordering = ['time_start']

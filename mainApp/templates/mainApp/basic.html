@@ -13,26 +13,22 @@
   <body>
 
   <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Главная страница</a>
+        {% for h in header %}
+        <li class="nav-item">
+          {% if page == h.1 %}
+          <a class="nav-link active" href="{{h.1}}">{{h.0}}</a>
+          {% else %}
+          <a class="nav-link" href="{{h.1}}">{{h.0}}</a>
+          {%endif%}
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/experience">Опыт работы</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/education">Образование</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link"href="/contacts">Контакты</a>
-        </li>
+        {% endfor %}
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-          <a class="navbar-brand"><font color="white">Никитина Дарья Викторовна</font></a>
-      </form>
+
+      <a class="navbar-brand"><font color="white">Никитина Дарья Викторовна</font></a>
   </nav>
-</header>
+  </header>
 
   <main role="main">
   <div class="jumbotron">

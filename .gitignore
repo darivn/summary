@@ -125,5 +125,5 @@ dmypy.json
 .pyre/
 
 # custom
-Summary/settings.py
+#Summary/settings.py
 db.sqlite3

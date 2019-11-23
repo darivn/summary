@@ -2,13 +2,13 @@
 
 {% block content %}
     <p>Высшее образование</p>
-    <ul class="list-group">
+    <ul class="list-group list-group-flush">
     {% for element in object_list%}
-        <li class="list-group-item">
+        <li class="list-group list-group-flush">
             <div>
                 <a href="/education/{{element.id}}"><h6>{{element.specialization}} ({{element.year_end}})</h6></a>
             </div>
-            </li>
+        </li>
     {% endfor %}
     </ul>
 {% endblock %}

@@ -20,7 +20,8 @@ def contacts(request):
                       'header': header,
                       'values': [
                           ['phone.svg', 'Номер телефона: ', '8(919)942-54-42'],
-                          ['email.svg','Почта: ', 'darivn@mail.ru']
+                          ['email.svg','Почта: ', 'darivn@mail.ru'],
+                          ['vk.svg', 'Страница в ВКонтакте', 'https://vk.com/nikdashav']
                                 ],
                       'page': '/contacts',
                       'year': datetime.date.today().year

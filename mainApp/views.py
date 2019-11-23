@@ -42,7 +42,7 @@ def element(request, pk):
         r = render(request, 'mainApp/element.html',
                   {
                       'header': header,
-                      'background': Background.objects.get(pk=id),
+                      'background': Background.objects.get(id_background=id),
                       'page': '/education',
                       'year': datetime.date.today().year
                   })

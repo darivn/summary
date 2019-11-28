@@ -1,5 +1,6 @@
+import django
 from django.db import models
-import datetime
+from django.utils import timezone
 
 class Background (models.Model):
     id_background = models.AutoField(primary_key=True)
@@ -24,8 +25,8 @@ class Experience (models.Model):
     company_name = models.CharField(max_length=150)
     area = models.CharField(max_length=300)
     responsibilities = models.CharField(max_length=300)
-    time_start = models.DateField(default=datetime.date.today())
-    time_end = models.DateField(default=datetime.date.today(), null=True, blank=True)
+    time_start = models.DateField(default=django.utils.timezone.now)
+    time_end = models.DateField(default=django.utils.timezone.now, null=True, blank=True)
 
     def __str__(self):
         return self.position

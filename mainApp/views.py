@@ -11,7 +11,8 @@ def index(request):
     return render(request, 'mainApp/mainPage.html', {
                                                         'header': header,
                                                         'page': '/',
-                                                         'year': datetime.date.today().year
+                                                        'year': datetime.date.today().year,
+                                                        'age': int((datetime.date.today() - datetime.date(1996, 2, 16)).days/365)
                                                     })
 
 def contacts(request):
@@ -19,9 +20,9 @@ def contacts(request):
                   {
                       'header': header,
                       'values': [
-                          ['phone.svg', 'Номер телефона: ', '8(919)942-54-42'],
-                          ['email.svg','Почта: ', 'darivn@mail.ru'],
-                          ['vk.svg', 'Страница в ВКонтакте', 'https://vk.com/nikdashav']
+                          ['phone.svg', 'Номер телефона: ', '8(xxx)xxx-xx-xx'],
+                          ['email.svg','Почта: ', 'xxx@xxx.xx'],
+                          ['vk.svg', 'Страница в ВКонтакте', 'https://vk.com/xxx']
                                 ],
                       'page': '/contacts',
                       'year': datetime.date.today().year

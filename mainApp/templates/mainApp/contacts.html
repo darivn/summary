@@ -1,7 +1,7 @@
 {% extends "mainApp/basic.html" %}
 {% load staticfiles %}
 {% block content %}
-    <p>Вы можете со мной связаться, позвонив по номеру или написав на почту.</p>
+    {%include 'mainApp/includes/text_contacts.html'%}
     <ul class="list-group">
     {% for val in values %}
         <li class="list-group list-group-flush">
